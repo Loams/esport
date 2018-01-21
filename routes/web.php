@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('user', 'UserController');
+Route::resource('game', 'GameController');
+Route::resource('team', 'TeamController');
+Route::resource('gametypes', 'GameTypesController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
